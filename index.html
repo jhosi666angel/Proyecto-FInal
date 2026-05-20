@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Web CV</title>
+
+	<link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+<header class="cabecera">
+  <nav class="menu-cabecera">
+    <div id="reloj-contenedor" class="reloj-digital"></div>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">☰</button>
+    
+    
+    <ul class="cabecera-menu" id="cabecera-menu">
+      <li><a href="#sec-about">Sobre Mi</a></li>
+      <li><a href="#sec-portafolio">Portafolio</a></li>
+      <li><a href="#sec-formulario">Contacta Conmigo</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="main-web">
+	<section id="sec-inicio">
+    <div>
+        <span class="titulo1">Omar Angel</span>
+        <span class="titulo2">Desarrollo Web, Diseño Gráfico, Fotografía...</span>
+    </div>
+</section>
+
+<section id="sec-about">	
+	
+	<h2>SOBRE MI</h2>
+	<img src="about.jpg" class="img-gato">
+	<p class="destacado"> Desarrollador Full Stack especializado en crear experiencias de usuario impecables con React y Node.js. <br> Cuento con 3 años de experiencia en metodologías ágiles (Scrum) y despliegue en la nube (AWS).<br> Destaco por mi capacidad para resolver problemas de código complejos y mejorar la velocidad de carga de las aplicaciones. Busco contribuir a un equipo innovador donde la calidad del producto sea una prioridad.
+	
+	A lo largo de mi trayectoria profesional, he trabajado con metodologías ágiles ( Scrum ), lo que me permite colaborar eficazmente con equipos multidisciplinarios y entregar código limpio, mantenible y de alta calidad.<br> Cuento con una sólida experiencia en la gestión de bases de datos relacionales ( PostgreSQL ) y no relacionales ( MongoDB ), así como en la automatización de despliegues en la nube mediante servicios de AWS ( S3, EC2).<br> Me apasiona optimizar el rendimiento técnico. En mi último puesto, lideré la migración de una plataforma heredada, reduciendo la velocidad de carga de la aplicación en un 35 % y mejorando la retención de usuarios. Busco unirme a un equipo innovador donde pueda aportar mi mentalidad de resolución de problemas, automatizar procesos y seguir impulsando el éxito de productos tecnológicos con un impacto real.</p>
+ <input type="submit" value="Descargar CV">
+</section>
+ 
+ 
+ <h2>PORTAFOLIO</h2>
+ <section id="sec-portafolio">
+	<img src="AdobeStock_721378829-scaled-ral0ovdx9gpk9brz985k70g2s4pqciz5za6jjohpko.jpeg" alt="">
+	<img src="dac5a3fabf5b81e73a37036256968a99.jpg" alt="">
+	<img src="digital-mindsetjpg.webp" alt="">
+	<img src="istockphoto-1459581852-612x612.jpg"alt="">
+	<img src="istockphoto-1867750813-612x612.jpg"alt="">
+	<img src="stock-photo-digital-transformation-conceptual-for-next-generation-technology-era-1614142333.jpg" alt="">
+	<img src="desarrollo-web-css-1.jpg"alt="">
+	<img src="gettyimages-2070763900-612x612.jpg" alt="">
+	<img src="representaciones-ui-ux-telefono-inteligente_23-2150201875.avif" alt="">
+	<img src="technology-network-data-connection-cyber-security-digital-data-global-5g-high-speed-internet-connection-and-big-data-analysis-process-background-photo.jpg" alt="">
+	<img src="visiones-futuras-concepto-negocio-tecnologia_23-2151893441.avif" alt="">
+	<img src="empresario-innovacion-digital-que-controla-engranajes-procesos-virtuales_1301985-4308.avif" alt="">
+</section>
+	
+<h2>CONTACTA CONMIGO </h2>
+<section id="sec-formulario">
+	<form class="contacto-form" name="fcontacto" action="index.html" method="post"> 
+		<p>
+			<label for="fnombre">Nombre</label>
+			<input type="text" name="fnombre" id="fnombre" placeholder="Nombre">
+		</p>
+		
+		<p>
+			<label for="femail">Email</label>
+			<input type="email" name="femail" id="femail" placeholder="Email">
+		</p>
+		
+		<p>
+			<label for="fmensaje">Mensaje:</label>
+			<textarea name="fmensaje" id="fmensaje" placeholder="Mensaje"></textarea>
+		</p>
+
+		<input type="submit" value="Enviar Mensaje">
+	</form>
+</section>
+
+<section id="sec-redes">
+	<div class="contenedor-redes">
+		<a href="https://www.facebook.com" target="_blank" class="enlace-red">Facebook</a>
+		<a href="https://github.com" target="_blank" class="enlace-red">GitHub</a>
+		<a href="https://instagram.com" target="_blank" class="enlace-red">Instagram</a>
+	</div>
+</section>
+</main>
+
+
+	
+<footer class="pie-web">
+	<p class="copyright">Copyright © Omar Angel</p>
+</footer>	
+	
+<script src="scripts.js"></script>
+</body>
+<div id="portfolio-modal" class="modal">
+  <span class="modal-cerrar"> &times;</span>
+  <img class="modal-contenido" id="modal-imagen" alt="Imagen ampliada">
+</div>
+</html>

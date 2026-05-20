@@ -1,0 +1,407 @@
+/*
+ÍNDICE:
+1. Normalización
+2. Reset
+3. Estilos propios
+4. Apartados Web
+...
+*/
+
+/* 1. Normalización ........................................................................... */
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+button,hr,input{overflow:visible}progress,sub,sup{vertical-align:baseline}[type=checkbox],[type=radio],legend{box-sizing:border-box;padding:0}html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}details,main{display:block}h1{font-size:2em;margin:.67em 0}hr{box-sizing:content-box;height:0}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}a{background-color:transparent}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bolder}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:ButtonText dotted 1px}fieldset{padding:.35em .75em .625em}legend{color:inherit;display:table;max-width:100%;white-space:normal}textarea{overflow:auto}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}[hidden],template{display:none}
+
+
+/* 2. Reset ........................................................................... */
+/* Reset.css v2.0 | 20110126 | License: none (public domain) | http://meyerweb.com/eric/tools/css/reset/ */
+a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
+
+
+/* 3. Estilos propios ................................................................. */
+html{box-sizing: border-box;}
+*, *:before, *:after {box-sizing: inherit;}
+
+a{text-decoration:none; transition:all 0.3s linear; word-wrap:break-word;}
+
+img{max-width:100%; height:auto;}
+
+abbr{cursor:help;}
+
+input[type="submit"],input[type="button"],input[type="reset"],button{cursor:pointer;}
+
+.rwd-container { position: relative; padding-bottom: 56.25%;  /* 16:9 */ height: 0; overflow: hidden; margin:0 0 25px 0;}
+	.rwd-container video, .rwd-container iframe, .rwd-container object, .rwd-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+html {scroll-behavior: smooth;}
+@media screen and (prefers-reduced-motion: reduce) {
+    html {scroll-behavior: auto;}
+}
+
+/* Iremos añadiendo más estilos útiles para aplicarlos siempre en nuestras páginas */
+
+
+/* 4. Estilos generales
+ ................................................................. */
+
+root{
+	--paddingLateral:18%
+}
+body{
+
+	
+.cabecera {
+    position: fixed;  
+    top: 0;           
+    left: 0;           
+    width: 100%;       
+
+}
+.cabecera-menu {
+    display: flex;           
+    justify-content: center;  
+    list-style: none;         
+    padding: 0;
+    margin: 0;
+    background-color: #333;   
+}
+
+.cabecera-menu li {
+    margin: 0 15px;         
+}
+
+.cabecera-menu a {
+    display: block;
+    padding: 15px 20px;
+    color: white;            
+    text-decoration: none;   
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.cabecera-menu a:hover {
+    background-color: #555;   
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+
+@media (max-width: 768px) {
+  .menu-cabecera {
+    position: relative;
+    display: flex;
+    justify-content: flex-end; 
+    padding: 10px;
+  }
+
+  .menu-toggle {
+    display: block; 
+  }
+
+  .cabecera-menu {
+    display: none; 
+    flex-direction: column;
+    position: absolute;
+    top: 100%; 
+    left: 0;
+    width: 100%;
+    background-color: #333; 
+    z-index: 1000;
+  }
+
+  
+  .cabecera-menu.mostrar {
+    display: flex;
+  }
+}
+.reloj-digital {
+  font-family:Courier New;
+  font-size: 0.9rem;
+  color: #fff; 
+  padding: 5px 10px;
+  background-color: black;
+  border-radius: 4px;
+  align-self: center;
+  margin-right: 15px;
+}
+
+
+@media (max-width: 768px) {
+  .menu-cabecera {
+    justify-content: space-between; 
+  }
+  .reloj-digital {
+    margin-right: 0;
+  }
+}
+
+
+.rwd-menu{display:none; position:absolute; top:15px; right:15px; z-index:10; background:#FFF; color:#000; padding:5px 10px; font-size:150%;}
+
+#sec-inicio {
+    height: 100vh;            
+    background-image: url('modern-unlimited-space-digital-billboard-in-minimalist-gallery_9975-133021.avif');
+    background-size: cover;    
+    background-position: center; 
+    display: flex;            
+    justify-content: center;   
+    align-items: center;       
+    text-align: center;       
+    color: black;             
+}
+	
+
+
+}
+
+.titulo1 {
+    display: block;
+	color
+    font-size: 3.5rem; 
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+
+.titulo2 {
+    display: block;
+    font-size: 1.2rem; 
+    color: Black;
+    margin-top: 10px;
+}
+
+
+h2 {
+    font-size: 2rem; 
+}
+
+.main-web {
+    margin-top: 0; 
+}
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 25px;
+	font-family:negrita;
+	font-size
+}
+
+#sec-about {
+    max-width: 800px;         
+    margin: 0 auto;           
+    padding: 2rem 1rem;       
+    text-align: center;      
+
+#sec-about .destacado {
+    text-align: justify;      
+    line-height: 1.8;        
+    color: #333333;           
+    font-size: 1.1rem;        
+    margin-bottom: 2rem;      
+}
+
+
+.img-gato {
+    display: block;
+    margin: 1.5rem auto;      
+    border-radius: 50%;       
+    max-width: 200px;        
+}
+
+	
+}
+
+
+#sec-portafolio {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px; 
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto; 
+}
+
+
+#sec-portafolio img {
+    width: 100%; 
+    height: 250px; 
+    object-fit: cover; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease;
+}
+
+
+#sec-portafolio img:hover {
+    transform: scale(1.03); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+#sec-formulario {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.contacto-form p {
+    margin-bottom: 15px;
+}
+
+.contacto-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+	
+	
+}
+.contacto-form input[type="submit"] {
+    background-color: #333; 
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    display: block;
+    width: 100%;
+}
+
+#sec-about input[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.contacto-form input[type="submit"]:hover {
+    background-color: #555;
+}
+
+.contacto-form textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-web {
+    flex: 1;
+}
+
+
+.pie-web {
+    background-color: #1a1a1a; 
+    color: #ffffff;           
+    text-align: center;       
+    padding: 20px 0;           
+    font-family: sans-serif;   
+}
+
+.pie-web .copyright {
+    margin: 0;                
+    font-size: 14px;          
+    letter-spacing: 1px;      
+}
+
+#sec-redes {
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.contenedor-redes {
+    display: flex;
+    justify-content: center;
+    gap: 25px; 
+}
+
+.enlace-red {
+    text-decoration: none;
+    color: #0077b5;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.2s ease;
+}
+
+.enlace-red:hover {
+    color: #333333; 
+}
+
+
+.pie-web {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px; 
+}
+
+.pie-web .copyright {
+    margin: 0;
+    font-family: sans-serif;
+    font-size: 14px;
+}
+
+
+.modal {
+  display: none; 
+  position: fixed;
+  z-index: 2000; 
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9); 
+  justify-content: center;
+  align-items: center;
+}
+
+
+.modal-contenido {
+  max-width: 85%;
+  max-height: 85vh;
+  object-fit: contain;
+  border: 3px white solid;
+  border-radius: 4px;
+}
+
+
+.modal-cerrar {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+#sec-portafolio img {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+#sec-portafolio img:hover {
+  transform: scale(1.03); 
+}
